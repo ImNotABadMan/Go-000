@@ -10,6 +10,8 @@ func main() {
 	homework()
 	user := dao.User{}
 	users := dao.GetUsers(&user)
+	fmt.Println("这里应该是进行Wrap错误，比如：errors.Wrapf(code.NotFound, \\\"sql error: %v\\\", err)；\\\n")
+	fmt.Println("在业务层再通过errors.Is(err, code.NotFound) 进行判断，而不是依赖底层错误")
 	fmt.Printf("The cause is [%T], %v\n", errors.Cause(users), errors.Cause(users))
 	fmt.Printf("Stack trace:\n%+v\n", users)
 
