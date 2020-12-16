@@ -2,6 +2,9 @@ package config
 
 import "fmt"
 
-func NewUserConfig() {
-	fmt.Println("使用wire注入配置")
+type Config struct {
+}
+
+func NewUserConfig(conf *Config) {
+	fmt.Println("初始化资源")
 }

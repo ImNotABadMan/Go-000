@@ -8,5 +8,5 @@ import (
 func StartServer() {
 	fmt.Println("开启server")
 
-	config.NewUserConfig()
+	config.NewUserConfig(new(config.Config))
 }
