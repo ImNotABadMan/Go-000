@@ -1,7 +1,12 @@
 package server
 
-import "fmt"
+import (
+	"Go-000/Week04/config"
+	"fmt"
+)
 
 func StartServer() {
 	fmt.Println("开启server")
+
+	config.NewUserConfig()
 }
